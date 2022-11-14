@@ -1,0 +1,46 @@
+_id: req_5cf95196e6604d5abb6bacff93d85fd4
+type: Request
+parentId: wrk_7c1263f1c554409a91918d75d288eb54
+modified: 1668411962138
+created: 1668351190164
+url: https://graphql.anilist.co
+name: AnimeListQuery
+description: ""
+method: POST
+body:
+  mimeType: application/graphql
+  text: '{"query":"query ($userId: Int) {\n              User(id:
+    $userId){\n                mediaListOptions{\n                  animeList{\n                    customLists\n                  }\n                  mangaList{\n                    customLists\n                  }\n                }\n              }\n              MediaListCollection(userId:
+    $userId,\n                type: ANIME,\n                sort:
+    STATUS,\n\t\t\t\t\t\t\t\tstatus:
+    PLANNING\n              ){\n                lists{\n                  status\n                  name\n                  isCustomList\n                  entries{\n                    progress\n                    progressVolumes\n                    customLists
+    (asArray:
+    true)\n                    media{\n                      id\n                      siteUrl\n\t\t\t\t\t\t\t\t\t\t\tnextAiringEpisode{\n\t\t\t\t\t\t\t\t\t\t\t\tepisode\n\t\t\t\t\t\t\t\t\t\t\t\tairingAt\n\t\t\t\t\t\t\t\t\t\t\t}\n                      title{\n                        userPreferred\n                      }\n                      status\n                      format\n                      episodes\n                      coverImage{\n                        medium\n                        large\n                        extraLarge\n                      }\n                    }\n                  }\n                }\n              }\n            }","variables":{"userId":851923}}'
+parameters:
+  - id: pair_daf8476740ec4e5bb568e60aa217fec6
+    name: ""
+    value: ""
+    description: ""
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_7ca9212219c347b88edc2b091e01316e
+  - id: pair_2836d3693f1942299d6c173dc5587db6
+    name: Authorization
+    value: Bearer
+      eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImFhZTU3ZDE2OTI3NDg1ZDRkODhlZGY1NjYzOTEyMTNjODc3ZjBmYWQyZmE1YjA5MzE3ZTg0ZWEyNDk3YWFiOWJiNDQzMDc4ZjIwMDIwYjQzIn0.eyJhdWQiOiI0NTkzIiwianRpIjoiYWFlNTdkMTY5Mjc0ODVkNGQ4OGVkZjU2NjM5MTIxM2M4NzdmMGZhZDJmYTViMDkzMTdlODRlYTI0OTdhYWI5YmI0NDMwNzhmMjAwMjBiNDMiLCJpYXQiOjE2NjUyMjI5NTgsIm5iZiI6MTY2NTIyMjk1OCwiZXhwIjoxNjk2NzU4OTU4LCJzdWIiOiI4NTE5MjMiLCJzY29wZXMiOltdfQ.ihSAbZWSC3KdaUnq8nrci_-JmWnfn3Dldf1Y55KhPuATND1bFlUIhWpOIhUFbQOrGrLRCVQArXrNCIjQHP7_fo2ixSqYka1xXXS99H-9Lr4ciqFFlyh2iNDtrGFPYBmkLf4dQVaZMjawYB44CO7Fm4lN5aMgz72AtezNX1818I2Nm8JRE0xyzNaR0gnm3Usz05sOGR5Qon7EU5CyoURs_inKg8_nUKbOIlF2c3F8UtuxHuNOASb7qPjg8l5mB_p-6TezntTrNMUQeWkoVu2CwDnPduUXJv3qSAXKmJOUH3-HhIEA6f8tC31_-hmpt0P3l9u_crFUVsfEnYEuNW-plBExWhtCZnX0xUlSnOnKxlgoemUuqOx9GWYkRVmiqSiDE8gfDLgEZ2o39jzQM63M31LcC80q5B099ko62BFiMh2N8t4OhoUrGsEbZVteDHv7I3KvPO4JgHcy1kn9m4mQrHCFf4QalgCcwLfb-OrerJGQwypnYs4V6-2ckFGLbcAi7labmtk_aQJAmSoSd3A-oGieXr_Fs1o2xiSU9a8i3yhT2Gte9I986q0O4llVBETnSRw6LthIkNnPP3fAsJj0WgsfIcGmsAoRlY09I3fQ--BcCGZKNgNv-MhHEqFGFQErgtUqKXlP78xpDuBm_Ut-dYiOj63bIHqUdjiQIRRiWII
+    description: ""
+authentication:
+  type: bearer
+  token: Authorization
+  prefix: Bearer
+    eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImFhZTU3ZDE2OTI3NDg1ZDRkODhlZGY1NjYzOTEyMTNjODc3ZjBmYWQyZmE1YjA5MzE3ZTg0ZWEyNDk3YWFiOWJiNDQzMDc4ZjIwMDIwYjQzIn0.eyJhdWQiOiI0NTkzIiwianRpIjoiYWFlNTdkMTY5Mjc0ODVkNGQ4OGVkZjU2NjM5MTIxM2M4NzdmMGZhZDJmYTViMDkzMTdlODRlYTI0OTdhYWI5YmI0NDMwNzhmMjAwMjBiNDMiLCJpYXQiOjE2NjUyMjI5NTgsIm5iZiI6MTY2NTIyMjk1OCwiZXhwIjoxNjk2NzU4OTU4LCJzdWIiOiI4NTE5MjMiLCJzY29wZXMiOltdfQ.ihSAbZWSC3KdaUnq8nrci_-JmWnfn3Dldf1Y55KhPuATND1bFlUIhWpOIhUFbQOrGrLRCVQArXrNCIjQHP7_fo2ixSqYka1xXXS99H-9Lr4ciqFFlyh2iNDtrGFPYBmkLf4dQVaZMjawYB44CO7Fm4lN5aMgz72AtezNX1818I2Nm8JRE0xyzNaR0gnm3Usz05sOGR5Qon7EU5CyoURs_inKg8_nUKbOIlF2c3F8UtuxHuNOASb7qPjg8l5mB_p-6TezntTrNMUQeWkoVu2CwDnPduUXJv3qSAXKmJOUH3-HhIEA6f8tC31_-hmpt0P3l9u_crFUVsfEnYEuNW-plBExWhtCZnX0xUlSnOnKxlgoemUuqOx9GWYkRVmiqSiDE8gfDLgEZ2o39jzQM63M31LcC80q5B099ko62BFiMh2N8t4OhoUrGsEbZVteDHv7I3KvPO4JgHcy1kn9m4mQrHCFf4QalgCcwLfb-OrerJGQwypnYs4V6-2ckFGLbcAi7labmtk_aQJAmSoSd3A-oGieXr_Fs1o2xiSU9a8i3yhT2Gte9I986q0O4llVBETnSRw6LthIkNnPP3fAsJj0WgsfIcGmsAoRlY09I3fQ--BcCGZKNgNv-MhHEqFGFQErgtUqKXlP78xpDuBm_Ut-dYiOj63bIHqUdjiQIRRiWII
+  disabled: true
+metaSortKey: -1665222579877
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
