@@ -5,7 +5,7 @@ void main()
     FILE* fptr;
     char str[50];
 
-    fptr = fopen("file.txt", "a+");
+    fptr = fopen("file.txt", "r");
 
     if (fptr == NULL)
     {
